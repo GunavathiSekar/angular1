@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" >
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+      <div>
+        <input type="text" ng-model="usertxt" ng-init="usertxt='Thanvika'">
+        <p>the name is <span ng-bind="usertxt"></span> </p>
+        <p>{{usertxt}}</p>
+      </div>
+        <!-- <div  ng-controller="namesCtrl">
+                
+                <ul>
+                  <li ng-repeat="x in names">
+                    {{ x.name + ', ' + x.country }}
+                    <img ng-src="D:/Sathish/ng/img/{{x.image}}.jpg">
+                  </li>
+                </ul>
+                
+                </div> -->
+                <div  ng-controller="namesCtrl">
+                <table border="1">
+                    <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Images</th>
+                        </tr>
+                      </thead>
+                    <tr ng-repeat="x in names">
+                      <td height="100" width=>{{ x.name }}</td>
+                      <td height="100"><img ng-src="D:/Sathish/ng/img/{{x.image}}.jpg"></td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div  ng-controller="namesCtrl1">
+                        {{ username }}
+                </div>
+                <script src="namesController.js"></script>
+
+</body>
+</html>
